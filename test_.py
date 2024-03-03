@@ -57,5 +57,35 @@ class TestCalculator(unittest.TestCase):
         result = calc.sub()
         self.assertEqual(result, 8)
 
+    def test_multiplication_positive_numbers(self):
+        calc = Calculator(5, 3)
+        result = calc.mul()
+        self.assertEqual(result, 15)
+
+    def test_multiplication_negative_numbers(self):
+        calc = Calculator(-5, -3)
+        result = calc.mul()
+        self.assertEqual(result, 15)
+
+    def test_multiplication_mixed_numbers(self):
+        calc = Calculator(5, -3)
+        result = calc.mul()
+        self.assertEqual(result, -15)
+
+    def test_division_positive_numbers(self):
+        calc = Calculator(6, 3)
+        result = calc.div()
+        self.assertEqual(result, 2)
+
+    def test_division_negative_numbers(self):
+        calc = Calculator(-6, -3)
+        result = calc.div()
+        self.assertEqual(result, 2)
+
+    def test_division_mixed_numbers(self):
+        calc = Calculator(6, -3)
+        result = calc.div()
+        self.assertEqual(result, -2)
+
 if __name__ == '__main__':
     unittest.main()
