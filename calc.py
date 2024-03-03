@@ -10,3 +10,8 @@ class Calculator():
         while y != 0:
             x, y = y, x % y
         return x
+
+    def lcm(self):
+        if self.a == 0 or self.b == 0:
+            return 0
+        return abs(self.a * self.b) // self.gcd()
