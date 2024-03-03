@@ -87,5 +87,6 @@ class TestCalculator(unittest.TestCase):
         result = calc.div()
         self.assertEqual(result, -2)
 
+
 if __name__ == '__main__':
     unittest.main()
