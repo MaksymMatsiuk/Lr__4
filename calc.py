@@ -12,4 +12,14 @@ class Calculator():
         return self.a*self.b
     
     def div(self):
-        return self.a/self.b
+        try:
+            result = self.a / self.b
+        except ZeroDivisionError:
+            result = "Ділення на нуль неможливе"
+        return result
+    
+    def exp(self):
+        return  self.a ** self.b
+    
+calc = Calculator(0, 0)
+print(calc.exp())

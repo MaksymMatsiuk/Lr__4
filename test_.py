@@ -87,6 +87,10 @@ class TestCalculator(unittest.TestCase):
         result = calc.div()
         self.assertEqual(result, -2)
 
+    def test_division_by_zero(self):
+        calc = Calculator(4, 0)
+        result = calc.div()
+        self.assertEqual(result, "Ділення на нуль неможливе")
 
 if __name__ == '__main__':
     unittest.main()
